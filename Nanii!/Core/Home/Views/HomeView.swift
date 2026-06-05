@@ -15,6 +15,7 @@ struct HomeView: View {
                 ForEach(viewModel.recommendedAnimes) { recommendation in
                     if (recommendation.entry?.first) != nil {
                        RecommendedAnimeView(anime: recommendation)
+                            .frame(width: UIScreen.main.bounds.width * 0.8)
                     }
                 }
             }
